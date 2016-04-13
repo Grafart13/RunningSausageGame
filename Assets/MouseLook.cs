@@ -13,8 +13,6 @@ public class MouseLook : MonoBehaviour {
 	public float lookSmoothDamp = 0.1f;
 	// Use this for initialization
 	void Start () {
-		xRotation=0;
-		yRotation=0;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +24,6 @@ public class MouseLook : MonoBehaviour {
 
         currentXRotation = Mathf.SmoothDamp(currentXRotation, xRotation, ref xRotationVelocity, lookSmoothDamp);
         currentYRotation = Mathf.SmoothDamp(currentYRotation, yRotation, ref yRotationVelocity, lookSmoothDamp);
-        transform.rotation = Quaternion.Euler(currentXRotation, currentYRotation, 0);
+        //transform.rotation = Quaternion.Euler(currentXRotation, currentYRotation, 0);
     }
 }

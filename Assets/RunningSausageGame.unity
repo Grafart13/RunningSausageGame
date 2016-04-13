@@ -98,6 +98,7 @@ GameObject:
   - 124: {fileID: 277010571}
   - 81: {fileID: 277010570}
   - 114: {fileID: 277010575}
+  - 114: {fileID: 277010576}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -166,9 +167,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 277010569}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0.26, y: 0.82, z: 0.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.91941756, z: 0, w: 0.39328277}
+  m_LocalPosition: {x: -1.98, y: 0.8900001, z: 1.9700003}
+  m_LocalScale: {x: 0.9532367, y: 0.953237, z: 0.95323706}
   m_Children: []
   m_Father: {fileID: 1981272415}
   m_RootOrder: 0
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 277010569}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae20b72c4668c574e9483dd1266d90dd, type: 3}
   m_Name: 
@@ -191,6 +192,24 @@ MonoBehaviour:
   xRotationVelocity: 0
   yRotationVelocity: 0
   lookSmoothDamp: 0.1
+--- !u!114 &277010576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 277010569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842c12c4de463b419f88a798578ed32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAt: {fileID: 1981272415}
+  camTransorm: {fileID: 0}
+  cam: {fileID: 0}
+  distance: 10
+  currentX: 0
+  currentY: 0
+  lookSenvitivity: 5
 --- !u!1 &601049577
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +658,7 @@ GameObject:
   - 136: {fileID: 1981272413}
   - 23: {fileID: 1981272412}
   - 114: {fileID: 1981272416}
+  - 54: {fileID: 1981272417}
   m_Layer: 0
   m_Name: Parowka
   m_TagString: Untagged
@@ -699,7 +719,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1981272411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.85, y: 2.33, z: -10}
+  m_LocalPosition: {x: -2.85, y: 2.48, z: -10.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 277010574}
@@ -720,3 +740,18 @@ MonoBehaviour:
   force: 0.2
   xForce: 0
   yForce: 0
+--- !u!54 &1981272417
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1981272411}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

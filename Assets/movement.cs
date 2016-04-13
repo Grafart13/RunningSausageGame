@@ -13,14 +13,14 @@ public class movement : MonoBehaviour {
     void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.rotation = Quaternion.Euler(0, camera01.GetComponent<MouseLook>().currentYRotation, 0);
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.rotation = Quaternion.Euler(0, camera01.GetComponent<ThirdPersonCam>().currentY, 0);
 
         xForce = Input.GetAxis("Horizontal") * force;
         yForce = Input.GetAxis("Vertical") * force;
-        Debug.Log(xForce);
 
         transform.Translate(new Vector3(xForce, 0, yForce));
     }
