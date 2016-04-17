@@ -13,6 +13,8 @@ public class Dormitory : MonoBehaviour {
 
     public DormitoryWall wallPrefab;
 
+	public DormitoryExternalDoor extDoorPrefab;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -58,11 +60,11 @@ public class Dormitory : MonoBehaviour {
         cell.transform.localPosition = new Vector3(coords.x * 2f - size.x * 1f + 1f, (float)(i * floorHeight), coords.z * 2f - size.z * 1f + 1f);
 		if (i < floors)
 		{
-			CreateWalls(coords, cell);
+			CreateWalls(coords, cell, i);
 		}
 	}
 
-	private void CreateWalls(IntVector2 coords, DormitoryCell cell)
+	private void CreateWalls(IntVector2 coords, DormitoryCell cell, int floor)
 	{
 		if (coords.x == 0)
 		{
@@ -74,7 +76,25 @@ public class Dormitory : MonoBehaviour {
 		}
 		if (coords.z == 0)
 		{
-			CreateWall(cell, null, DormitoryDirection.SOUTH);
+			if (floor == 0)
+			{
+				if (coords.x == size.x / 2 - 1)
+				{
+					CreateExternalDoor(cell, null, DormitoryDirection.SOUTH, true);
+				}
+				else if (coords.x == size.x / 2)
+				{
+					CreateExternalDoor(cell, null, DormitoryDirection.SOUTH, false);
+				}
+				else
+				{
+					CreateWall(cell, null, DormitoryDirection.SOUTH);
+				}
+			}
+			else
+			{
+				CreateWall(cell, null, DormitoryDirection.SOUTH);
+			}
 		}
 		if (coords.z == size.z - 1)
 		{
@@ -90,6 +110,22 @@ public class Dormitory : MonoBehaviour {
 		{
 			wall = Instantiate(wallPrefab) as DormitoryWall;
 			wall.Initialize(cellB, cellA, direction.GetOpposite());
+		}
+	}
+
+	public void CreateExternalDoor(DormitoryCell cellA, DormitoryCell cellB, DormitoryDirection direction, bool mirrored)
+	{
+		DormitoryExternalDoor door = Instantiate(extDoorPrefab) as DormitoryExternalDoor;
+		door.Initialize(cellA, cellB, direction);
+		if (cellB != null)
+		{
+			door = Instantiate(extDoorPrefab) as DormitoryExternalDoor;
+			door.Initialize(cellB, cellA, direction.GetOpposite());
+		}
+		if (mirrored)
+		{
+			door.transform.localPosition = new Vector3(0f, 0f, -1f);
+			door.transform.localRotation = direction.GetOpposite().ToRotation();
 		}
 	}
 }

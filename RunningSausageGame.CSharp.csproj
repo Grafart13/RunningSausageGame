@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\DormitoryCell.cs" />
     <Compile Include="Assets\Scripts\DormitoryCellEdge.cs" />
     <Compile Include="Assets\Scripts\DormitoryDirection.cs" />
+    <Compile Include="Assets\Scripts\DormitoryExternalDoor.cs" />
     <Compile Include="Assets\Scripts\DormitoryWall.cs" />
     <Compile Include="Assets\Scripts\IntVector2.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
