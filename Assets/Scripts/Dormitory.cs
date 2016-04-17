@@ -55,7 +55,7 @@ public class Dormitory : MonoBehaviour {
         cells[coords.x, coords.z] = cell;
         cell.name = "Dorm cell " + coords.x + ", " + coords.z + "; floor " + i;
         cell.transform.parent = transform;
-        cell.transform.localPosition = new Vector3(coords.x - size.x * 0.5f + 0.5f, (float)(i * floorHeight), coords.z - size.z * 0.5f + 0.5f);
+        cell.transform.localPosition = new Vector3(coords.x * 2f - size.x * 1f + 1f, (float)(i * floorHeight), coords.z * 2f - size.z * 1f + 1f);
 		if (i < floors)
 		{
 			CreateWalls(coords, cell);
