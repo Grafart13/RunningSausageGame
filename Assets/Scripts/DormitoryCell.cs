@@ -3,6 +3,10 @@ using System.Collections;
 
 public class DormitoryCell : MonoBehaviour {
 
+    private DormitoryCellEdge[] edges = new DormitoryCellEdge[DormitoryDirections.Count];
+
+	public IntVector2 coordinates;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -12,4 +16,14 @@ public class DormitoryCell : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void SetEdge (DormitoryDirection direction, DormitoryCellEdge edge)
+    {
+        edges[(int)direction] = edge;
+    }
+
+    public DormitoryCellEdge GetEdge(DormitoryDirection direction)
+    {
+        return edges[(int)direction];
+    }
 }

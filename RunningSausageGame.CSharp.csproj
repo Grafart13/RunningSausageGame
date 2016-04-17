@@ -71,6 +71,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Dormitory.cs" />
     <Compile Include="Assets\Scripts\DormitoryCell.cs" />
+    <Compile Include="Assets\Scripts\DormitoryCellEdge.cs" />
+    <Compile Include="Assets\Scripts\DormitoryDirection.cs" />
+    <Compile Include="Assets\Scripts\DormitoryWall.cs" />
+    <Compile Include="Assets\Scripts\IntVector2.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCam.cs" />
     <Compile Include="Assets\Scripts\WorldBuilder.cs" />
