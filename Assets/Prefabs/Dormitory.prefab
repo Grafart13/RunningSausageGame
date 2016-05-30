@@ -45,6 +45,7 @@ MonoBehaviour:
     x: 20
     z: 20
   cellPrefab: {fileID: 11434758, guid: c964b8e69e197ad4eb666f31849ac2d6, type: 2}
+  chairPrefab: {fileID: 0}
   wallPrefab: {fileID: 11406852, guid: 6bf109f5f47a93e43b5126f5ea216f04, type: 2}
   extDoorPrefab: {fileID: 11425082, guid: bd2dc8c5bda6bd549817711ab40bfee0, type: 2}
 --- !u!1001 &100100000

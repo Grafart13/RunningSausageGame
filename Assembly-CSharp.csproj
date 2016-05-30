@@ -52,6 +52,7 @@
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\RootMotionOff.cs" />
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\SkinnedMeshCombiner.cs" />
      <Compile Include="Assets\CameraCollision\Scripts\CameraCollision.cs" />
+     <Compile Include="Assets\Scripts\Chair.cs" />
      <Compile Include="Assets\Scripts\Dormitory.cs" />
      <Compile Include="Assets\Scripts\DormitoryCell.cs" />
      <Compile Include="Assets\Scripts\DormitoryCellEdge.cs" />
@@ -67,12 +68,19 @@
      <Compile Include="Assets\Scripts\WorldBuilder.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
      <None Include="Assets\CameraCollision\Readme.txt" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>C:/Users/berq/Desktop/studia/new/RunningSausageGame/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{4079424C-E6D5-61A8-79CA-691C7D6CC000}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

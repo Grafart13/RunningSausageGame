@@ -9,6 +9,10 @@ public class Dormitory : MonoBehaviour {
 
     public DormitoryCell cellPrefab;
 
+    public Chair chairPrefab;
+
+    public Chair[] chairs;
+
     private DormitoryCell[,] cells;
 
     public DormitoryWall wallPrefab;
@@ -17,7 +21,6 @@ public class Dormitory : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -32,6 +35,17 @@ public class Dormitory : MonoBehaviour {
 
     public void Generate()
     {
+	    System.Random rnd = new System.Random();
+        //chairs = new Chair[10];
+		for(int i =0; i<10; i++){
+	        Chair chair = Instantiate(chairPrefab) as Chair;
+	        //chairs[i] = chair;
+	        chair.transform.parent = transform;
+	        chair.transform.localScale += new Vector3(1, 1, 1);
+	        chair.transform.localPosition = new Vector3(rnd.Next(-size.x,size.x), 0, rnd.Next(-size.z,size.z));
+	        chair.transform.Rotate(new Vector3(0, 0, 1), rnd.Next(360));
+	    }
+
         cells = new DormitoryCell[size.x, size.z];
         for (int i = 0; i < floors; i++)
         {
@@ -53,6 +67,7 @@ public class Dormitory : MonoBehaviour {
 
     private void CreateCell(IntVector2 coords, int i)
     {
+
         DormitoryCell cell = Instantiate(cellPrefab) as DormitoryCell;
         cells[coords.x, coords.z] = cell;
         cell.name = "Dorm cell " + coords.x + ", " + coords.z + "; floor " + i;
