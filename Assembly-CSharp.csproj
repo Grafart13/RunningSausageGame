@@ -52,6 +52,10 @@
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\RootMotionOff.cs" />
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\SkinnedMeshCombiner.cs" />
      <Compile Include="Assets\CameraCollision\Scripts\CameraCollision.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\ControlGUIScript.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\GUIBarScript.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\MoreButtonScript.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\MoveCameraScript.cs" />
      <Compile Include="Assets\Scripts\Chair.cs" />
      <Compile Include="Assets\Scripts\Dormitory.cs" />
      <Compile Include="Assets\Scripts\DormitoryCell.cs" />
@@ -68,6 +72,7 @@
      <Compile Include="Assets\Scripts\WorldBuilder.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
      <None Include="Assets\CameraCollision\Readme.txt" />
+     <None Include="Assets\GradientGUIBars\ReadMe\AboutFonts.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/berq/Desktop/studia/new/RunningSausageGame/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

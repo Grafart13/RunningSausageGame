@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\Editor\TurnOffRenderers.cs" />
      <None Include="Assets\CameraCollision\Readme.txt" />
+     <None Include="Assets\GradientGUIBars\ReadMe\AboutFonts.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/berq/Desktop/studia/new/RunningSausageGame/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
