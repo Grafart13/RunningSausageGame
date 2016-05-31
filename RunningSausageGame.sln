@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningSausageGame.CSharp.Plugins", "RunningSausageGame.CSharp.Plugins.csproj", "{9D8DC81B-6088-2451-3367-332EA15609C2}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningSausageGame.CSharp", "RunningSausageGame.CSharp.csproj", "{E66C069D-0A3C-6D6E-F2F0-DDCAF7327402}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningSausageGame.CSharp.Editor", "RunningSausageGame.CSharp.Editor.csproj", "{92082514-B873-2864-B43F-11DEA760C5B7}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D8DC81B-6088-2451-3367-332EA15609C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D8DC81B-6088-2451-3367-332EA15609C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D8DC81B-6088-2451-3367-332EA15609C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D8DC81B-6088-2451-3367-332EA15609C2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E66C069D-0A3C-6D6E-F2F0-DDCAF7327402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E66C069D-0A3C-6D6E-F2F0-DDCAF7327402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E66C069D-0A3C-6D6E-F2F0-DDCAF7327402}.Release|Any CPU.ActiveCfg = Release|Any CPU

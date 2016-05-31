@@ -63,6 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="RunningSausageGame.CSharp.Plugins.csproj">
+      <Project>{9D8DC81B-6088-2451-3367-332EA15609C2}</Project>
+      <Name>RunningSausageGame.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\AllStarCharacterLibray\Scripts\CamTarget.cs" />
     <Compile Include="Assets\AllStarCharacterLibray\Scripts\CharacterDemoController.cs" />
     <Compile Include="Assets\AllStarCharacterLibray\Scripts\MouseOrbit.cs" />
@@ -75,11 +81,21 @@
     <Compile Include="Assets\Scripts\DormitoryDirection.cs" />
     <Compile Include="Assets\Scripts\DormitoryExternalDoor.cs" />
     <Compile Include="Assets\Scripts\DormitoryWall.cs" />
+    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\EnemyMovements.cs" />
     <Compile Include="Assets\Scripts\IntVector2.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCam.cs" />
     <Compile Include="Assets\Scripts\WorldBuilder.cs" />
     <Compile Include="Assets\Scripts\movement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
